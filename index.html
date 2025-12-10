@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discover New Offers, Apps & Rewards – Continue</title>
+  <meta name="description" content="Explore a curated stream of offers, apps, games and reward pages. Click to continue and discover what you can get from our partners." />
+  <style>
+    :root {
+      --bg: #020617;
+      --card: #020617;
+      --accent: #22c55e;
+      --accent-soft: rgba(34, 197, 94, 0.18);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --border: #1f2937;
+      --radius-xl: 22px;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, #1f2937 0, #020617 55%, #000 100%);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+    .wrapper {
+      max-width: 720px;
+      width: 100%;
+    }
+    .card {
+      background: rgba(15, 23, 42, 0.96);
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(30, 64, 175, 0.55);
+      padding: 22px 20px 18px;
+      box-shadow: 0 22px 60px rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(18px);
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      padding: 4px 10px 4px 6px;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 10px rgba(34, 197, 94, 0.9);
+    }
+    h1 {
+      font-size: clamp(24px, 4.6vw, 30px);
+      line-height: 1.15;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    h1 span {
+      color: var(--accent);
+    }
+    .lead {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      margin-bottom: 14px;
+    }
+    .highlight {
+      background: linear-gradient(120deg, rgba(34,197,94,0.14), rgba(56,189,248,0.08));
+      border-radius: 14px;
+      padding: 10px 11px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .highlight strong {
+      color: var(--accent);
+    }
+    .steps {
+      list-style: none;
+      font-size: 13px;
+      color: var(--muted);
+      display: grid;
+      gap: 4px;
+      margin-bottom: 16px;
+    }
+    .steps li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .steps-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      color: var(--accent);
+      flex-shrink: 0;
+      background: rgba(15, 23, 42, 0.9);
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      background: linear-gradient(to right, #22c55e, #16a34a);
+      color: #022c22;
+      box-shadow: 0 16px 35px rgba(22, 163, 74, 0.65);
+      margin-bottom: 8px;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, filter 0.12s ease;
+      width: 100%;
+      justify-content: center;
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 45px rgba(22, 163, 74, 0.85);
+      filter: brightness(1.03);
+    }
+    .btn-primary span.arrow {
+      font-size: 16px;
+    }
+    .note {
+      font-size: 11px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--muted);
+      opacity: 0.9;
+    }
+    .trust-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: rgba(148, 163, 184, 0.9);
+    }
+    @media (max-width: 480px) {
+      .card {
+        padding: 18px 14px 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <main class="card">
+      <div class="pill">
+        <span class="pill-dot"></span>
+        Curated offers, apps & rewards
+      </div>
+      <h1>
+        Continue to our <span>offers page</span> and explore what you can get
+      </h1>
+      <p class="lead">
+        On the next page you’ll see a stream of partner offers: apps, games, tools, trials
+        and other promotions. Some of them may reward you for signing up, installing or
+        trying their services (depending on your country).
+      </p>
+
+      <div class="highlight">
+        <strong>Important:</strong> the next page is run by our advertising partners.
+        We don’t control their content or payouts. Explore only what truly interests you
+        and always read the terms before submitting any personal data.
+      </div>
+
+      <ul class="steps">
+        <li>
+          <span class="steps-icon">1</span>
+          <span>Click the button below to continue to our partners’ offer hub.</span>
+        </li>
+        <li>
+          <span class="steps-icon">2</span>
+          <span>Browse the offers, apps and pages that appear and choose what you like.</span>
+        </li>
+        <li>
+          <span class="steps-icon">3</span>
+          <span>Complete any sign-up, install or trial only if it looks safe and useful for you.</span>
+        </li>
+      </ul>
+
+      <!-- MAIN CTA – Adsterra Smartlink -->
+      <a class="btn-primary" href="https://www.effectivegatecpm.com/mppkzs5wt8?key=8e143b27ae6ed5b9d5cb83dbf5e33a52">
+        Continue to offers & apps
+        <span class="arrow">→</span>
+      </a>
+
+      <p class="note">
+        By clicking the button you agree to leave this page and be redirected to third-party
+        advertising content. You can always close the next page if you’re not interested.
+      </p>
+
+      <div class="trust-row">
+        <div class="trust-item">
+          <span class="dot"></span>
+          <span>No registration required on this page</span>
+        </div>
+        <div class="trust-item">
+          <span class="dot"></span>
+          <span>Free to explore, no deposit needed</span>
+        </div>
+        <div class="trust-item">
+          <span class="dot"></span>
+          <span>Offers availability depends on your country</span>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+
